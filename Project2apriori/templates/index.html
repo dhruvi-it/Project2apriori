@@ -2,17 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check Apriori Algorithm</title>
     <style>
         body {
-            font-family: Times New Roman, Serif;
+            font-family: "Times New Roman", serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f9f9f9;
         }
         h1 {
             text-align: center;
+            margin-bottom: 20px;
         }
         form {
-            text-align: center;
-            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-size: 16px;
+        }
+        input {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -21,10 +59,10 @@
     
     <form id="uploadForm" action="/process_csv" method="POST" enctype="multipart/form-data">
         <label for="file">Input File:</label>
-        <input type="file" id="file" name="file" accept=".csv" required><br><br>
+        <input type="file" id="file" name="file" accept=".csv" required>
         
         <label for="min_support">Minimal Support:</label>
-        <input type="number" id="min_support" name="min_support" value="20" required><br><br>
+        <input type="number" id="min_support" name="min_support" value="20" required>
         
         <button type="submit">Upload and Run Apriori Algorithm</button>
     </form>
