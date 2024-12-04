@@ -114,7 +114,5 @@ def process_csv():
         total_count=total_count,
         result=result_string
     )
-
-
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=7000)
